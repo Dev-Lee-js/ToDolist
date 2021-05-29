@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="js-clock">
+        <h1>00:00</h1>
+      </div>
+      <form class="js-form form">
+        <input type="text" style="color:white" placeholder="이름을 입력하세요"/>
+        <div class="underline"></div>
+      </form>
+      <h4 class="js-greetings greetings"></h4>
+      <form class="js-toDoForm">
+        <input type="text" style="color:white" />
+        <div class="underline2"></div>
+      </form>
+      <div class="outer">
+        <div class="listDiv">
+          <ul class="js-toDoList"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="js-weather">
+      <span class="location"></span>
+      <span class="tempWeather"></span>
+    </div>
+    <script src="clock.js"></script>
+    <script src="gretting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>

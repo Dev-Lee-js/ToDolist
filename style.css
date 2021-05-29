@@ -1,0 +1,335 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+  /* background-color: transparent; */
+  background-position: center center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.main{
+  position: absolute;
+  left: 49%;
+  top: 50%;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  margin-left: -250px;
+  margin-top: -260px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.js-clock{
+  position: absolute;
+  margin-bottom: 130px;
+  font: small-caps bold 100px/1 sans-serif;
+  /* font-family: 'Noto Sans KR', sans-serif;
+  font-size: 100px;
+  font-weight: 900; */
+  color:white;
+}
+
+.js-weather{
+  position:absolute;
+  width: 1476px;
+  height: 50px;
+  top: 22px;
+  left: 30px;
+}
+
+.js-weather .locationIcon {
+  position: relative;
+  width:14px;
+  left:2px;
+  bottom: -2px;
+}
+
+.js-weather .location {
+  position: absolute;
+  left:30px;
+  top:1px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-transform: lowercase;
+}
+
+.js-weather .tempWeather {
+  position:absolute;
+  top:1px;
+  right:0;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-transform: lowercase;
+}
+
+.js-form{
+  position:absolute;
+  margin-bottom: -40px;
+}
+
+.js-form input{
+  position: relative;
+  left: 3px;
+  height: 100%;
+  width: 350px;
+  font-size: 32px;
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid white;
+  opacity: 0.7;
+  background-color: transparent;
+}
+
+
+.js-form input:focus{
+  outline:none;
+  opacity: 1;
+}
+
+.js-form input::placeholder{
+  color:white;
+  font-size: 24px;
+}
+
+.js-form .underline {
+  position: absolute;
+  left: 3px;
+  width: 100%;
+  bottom: 0;
+  height: 3px;
+}
+
+.js-form .underline:before{
+  position:absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left:0;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.js-form input:focus ~ .underline:before{
+  transform: scaleX(1);
+}
+
+.js-toDoList li{
+  width: 350px;
+  color: white;
+  text-align: left;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  line-height: 25px;
+  font-size: 25px;
+}
+
+.js-toDoList input{
+  margin: 5%;
+}
+
+.js-toDoList button{
+  position:absolute;
+  height: 44px;
+  right: 50px;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+/* .js-toDoList button:hover{
+  background:yellow;
+} */
+
+.js-toDoList{
+  margin: 0px;
+  padding: 0px;
+  width: 395px;
+  height: 174px;
+}
+
+.outer{
+  position:relative;
+  bottom: -210px;  
+  width: 395px;
+  height: 174px;
+  overflow: hidden;
+  background:transparent;
+}
+
+.listDiv{
+  position:absolute;
+  width: 440px;
+  height: 174px;
+  overflow-y: scroll;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.clicked {
+  color:#9AECDB;
+}
+
+.form,
+.greetings,
+.js-toDoForm,
+.outer{
+  display: none;
+}
+
+.js-greetings{
+  position: absolute;
+  font-size: 24px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+  color:white;
+  bottom:220px;
+}
+
+.js-toDoForm{
+  position: absolute;
+  bottom:160px;
+}
+
+.js-toDoForm input{
+  height: 100%;
+  width: 350px;
+  font-size: 24px;
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid white;
+  opacity: 0.7;
+  background-color: transparent;
+}
+
+
+.js-toDoForm input:focus{
+  outline:none;
+  opacity: 1;
+}
+
+.js-toDoForm .underline2 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 3px;
+}
+
+.js-toDoForm .underline2:before{
+  position:absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left:0;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in;
+}
+
+.js-toDoForm input:focus ~ .underline2:before{
+  transform: scaleX(1);
+}
+
+.delline{
+  text-decoration : line-through;
+}
+
+.moving{
+  animation: movingUp 0.5s ease;
+  position: absolute;
+  top: 300px;
+}
+
+@keyframes movingUp{
+  from{
+    opacity: 0;
+  } 
+  to{
+    opacity: 1;
+    position: absolute;
+    top: 300px;
+  }
+}
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  } 
+  to{
+    opacity: 1;
+  }
+}
+
+.bgImage{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  min-width: 1024px;
+  min-height: 100%;
+  animation: fadeIn 0.9s ease-in;
+}
+
